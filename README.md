@@ -1,7 +1,7 @@
 # covid19
 covid19 case web app, network and deep learning model
 
-The data and the analytics is that they are using multiple CSV files with poor versioning.
+The problem with the current numbers and analytics is there are multiple CSV files with poor versioning.
 There is different formats, numbers of columns and it is difficult for people to report cases themselves. 
 The web app allows individual users to submit cases to the network if they believe they are experiencing symptons.
 The case is created on the network and sent to the main Corona Virus Case Network.
