@@ -22,18 +22,6 @@ buildscript {
         slf4j_version = '1.7.25'
         log4j_version = '2.11.2'
 
-        // braid
-        braid_version = '4.1.2-RC13'
-
-        // tokens
-        tokens_release_version = '1.1'
-        tokens_release_group = 'com.r3.corda.lib.tokens'
-
-        // accounts
-        accounts_release_group = 'com.r3.corda.lib.accounts'
-        accounts_release_version = '1.0-RC04'
-        confidential_id_release_group = "com.r3.corda.lib.ci"
-        confidential_id_release_version = "1.0-RC03"
     }
 
     repositories {
@@ -53,9 +41,6 @@ buildscript {
         classpath "net.corda.plugins:cordformation:$corda_gradle_plugins_version"
         classpath "net.corda.plugins:cordapp:$corda_gradle_plugins_version"
         classpath "net.corda.plugins:api-scanner:$corda_gradle_plugins_version"
-
-        // Open API
-        classpath "org.openapitools:openapi-generator-gradle-plugin:3.3.4"
 
         // spring plugins
         classpath "org.springframework.boot:spring-boot-gradle-plugin:$spring_boot_version"
@@ -100,7 +85,6 @@ allprojects {
 
 apply plugin: 'net.corda.plugins.cordapp'
 apply plugin: 'net.corda.plugins.cordformation'
-apply plugin: 'org.openapi.generator'
 
 sourceSets {
     main {
@@ -127,100 +111,15 @@ dependencies {
     cordaCompile "org.apache.logging.log4j:log4j-web:${log4j_version}"
     cordaCompile "org.slf4j:jul-to-slf4j:$slf4j_version"
 
-    //Braid
-    compile "io.bluebank.braid:braid-corda:$braid_version"
-    braid 'io.bluebank.braid:braid-server:4.1.2-RC13'
-
-    // Token SDK dependencies.
-    cordapp "$tokens_release_group:tokens-contracts:$tokens_release_version"
-    cordapp "$tokens_release_group:tokens-workflows:$tokens_release_version"
-    cordapp "$tokens_release_group:tokens-money:$tokens_release_version"
-    cordapp "$tokens_release_group:tokens-selection:$tokens_release_version"
-
-    //Account lib
-    cordapp "$confidential_id_release_group:ci-workflows:$confidential_id_release_version"
-    cordapp "$accounts_release_group:accounts-contracts:$accounts_release_version"
-    cordapp "$accounts_release_group:accounts-workflows:$accounts_release_version"
-
 }
 
 
 cordapp {
     info {
-        name "Covid19"
+        name "Covid Case Network"
         vendor "Stateset, Inc."
         targetPlatformVersion corda_platform_version.toInteger()
         minimumPlatformVersion corda_platform_version.toInteger()
-    }
-}
-
-task deployDev(type: net.corda.plugins.Cordform, dependsOn: ['jar']) {
-    directory "./build/nodes"
-    nodeDefaults {
-        projectCordapp {
-            deploy = false
-        }
-        cordapp("$confidential_id_release_group:ci-workflows:$confidential_id_release_version")
-        cordapp("$accounts_release_group:accounts-contracts:$accounts_release_version")
-        cordapp("$accounts_release_group:accounts-workflows:$accounts_release_version")
-        cordapp "$tokens_release_group:tokens-contracts:$tokens_release_version"
-        cordapp "$tokens_release_group:tokens-workflows:$tokens_release_version"
-        cordapp "$tokens_release_group:tokens-money:$tokens_release_version"
-        cordapp "$tokens_release_group:tokens-selection:$tokens_release_version"
-        cordapp project(":contracts")
-        cordapp project(":workflows")
-    }
-    node {
-        name "O=Covid Notary,L=London,C=GB"
-        notary = [validating: true]
-        p2pPort 10002
-        rpcSettings {
-            address("localhost:10003")
-            adminAddress("localhost:10043")
-        }
-        //cordapps = []
-        extraConfig = ['h2Settings.address': 'localhost:12344']
-    }
-    node {
-        name "O=PrincetonCapital,L=Princeton,C=US"
-        p2pPort 10008
-        rpcSettings {
-            address("localhost:10036")
-            adminAddress("localhost:10073")
-        }
-        extraConfig = ['h2Settings.address': 'localhost:12345']
-        rpcUsers = [[user: "user1", "password": "test", "permissions": ["ALL"]]]
-    }
-    node {
-        name "O=StateSet,L=San Mateo,C=US"
-        p2pPort 10011
-        rpcSettings {
-            address("localhost:10030")
-            adminAddress("localhost:10070")
-        }
-        extraConfig = ['h2Settings.address': 'localhost:12346']
-        rpcUsers = [[user: "user1", "password": "test", "permissions": ["ALL"]]]
-    }
-    node {
-        name "O=WhiteHaute,L=Houston,C=US"
-        p2pPort 10014
-        rpcSettings {
-            address("localhost:10012")
-            adminAddress("localhost:10052")
-        }
-        extraConfig = ['h2Settings.address' : 'localhost:12346']
-        rpcUsers = [[ user: "user1", "password": "test", "permissions": ["ALL"]]]
-    }
-    node {
-        name "O=SevenTrain,L=Atlanta,C=ES"
-        p2pPort 10017
-        rpcSettings {
-            address("localhost:10015")
-            adminAddress("localhost:10055")
-        }
-
-        extraConfig = ['h2Settings.address' : 'localhost:12348']
-        rpcUsers = [[ user: "user1", "password": "test", "permissions": ["ALL"]]]
     }
 }
 
@@ -231,13 +130,6 @@ task deployNodes(type: net.corda.plugins.Cordform, dependsOn: ['jar']) {
         projectCordapp {
             deploy = false
         }
-        cordapp("$confidential_id_release_group:ci-workflows:$confidential_id_release_version")
-        cordapp("$accounts_release_group:accounts-contracts:$accounts_release_version")
-        cordapp("$accounts_release_group:accounts-workflows:$accounts_release_version")
-        cordapp "$tokens_release_group:tokens-contracts:$tokens_release_version"
-        cordapp "$tokens_release_group:tokens-workflows:$tokens_release_version"
-        cordapp "$tokens_release_group:tokens-money:$tokens_release_version"
-        cordapp "$tokens_release_group:tokens-selection:$tokens_release_version"
         cordapp project(":contracts")
         cordapp project(":workflows")
     }
