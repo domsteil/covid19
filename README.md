@@ -1,10 +1,10 @@
-# covid19
-covid19 case web app, network and deep learning model
+# covid19 case network
+covid19 case network web app, distributed network and deep learning model
 
-The problem with the current numbers and analytics is there are multiple CSV files with poor versioning.
+The problem with the current numbers and analytics is there are multiple CSV files with poor versioning. There is a lack of visibility into submitted cases by region. There needs to be a better way to reference how new cases emerged. 
 There is different formats, numbers of columns and it is difficult for people to report cases themselves. 
 The web app allows individual users to submit cases to the network if they believe they are experiencing symptons.
-The case is created on the network and sent to the main Corona Virus Case Network.
+The case is created on the network and sent to the main Corona Virus Case Network. 
 
 The Case will use a shared structured format:
 
@@ -46,4 +46,6 @@ data class Message(val id: UniqueIdentifier,
                    override val linearId: UniqueIdentifier = UniqueIdentifier())
 ```
 
-Better data from the distributed network can exported and to use the tabular Case data for Deep Learning and Analytics. Find out faster where cases are emerging. Where to quarantine. Case References can also be used.
+Tabular data from the distributed network can be exported for Deep Learning and Analytics. Find out faster where cases are emerging. Where to quarantine. Case References can also be used.
+
+The Deep Learning Notebooks can be found in the /notebooks dir. 
