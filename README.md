@@ -1,10 +1,10 @@
 # covid19 case network
 covid19 case network web app, distributed network and deep learning model
 
-The problem with the current numbers and analytics is there are multiple CSV files with poor versioning.
+The problem with the current numbers and analytics is there are multiple CSV files with poor versioning. There is a lack of visibility into submitted cases by region. There needs to be a better way to reference how new cases emerged. 
 There is different formats, numbers of columns and it is difficult for people to report cases themselves. 
 The web app allows individual users to submit cases to the network if they believe they are experiencing symptons.
-The case is created on the network and sent to the main Corona Virus Case Network.
+The case is created on the network and sent to the main Corona Virus Case Network. 
 
 The Case will use a shared structured format:
 
