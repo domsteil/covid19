@@ -32,8 +32,8 @@ import java.util.*
 import javax.annotation.PostConstruct
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.CrossOrigin
-import io.stateset.case.*
-import io.stateset.patient.*
+import io.covid.case.*
+import io.covid.patient.*
 import net.corda.core.node.services.AttachmentId
 import net.corda.core.node.services.vault.AttachmentQueryCriteria
 import net.corda.core.node.services.vault.Builder

@@ -18,17 +18,7 @@ package io.covid.server.components
 
 import com.github.manosbatsis.corbeans.spring.boot.corda.rpc.NodeRpcConnection
 import com.github.manosbatsis.corbeans.spring.boot.corda.service.CordaNodeServiceImpl
-import io.stateset.*
-import io.stateset.account.TypeOfBusiness
-import io.stateset.agreement.AgreementStatus
-import io.stateset.agreement.AgreementType
-import io.stateset.application.ApplicationStatus
-import io.stateset.approval.ApprovalStatus
-import io.stateset.case.CasePriority
-import io.stateset.case.CaseStatus
-import io.stateset.loan.LoanStatus
-import io.stateset.loan.LoanType
-import io.stateset.message.Message
+import io.covid.*
 import net.corda.core.identity.Party
 import net.corda.core.transactions.SignedTransaction
 import net.corda.core.utilities.getOrThrow
