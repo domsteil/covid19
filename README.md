@@ -46,4 +46,6 @@ data class Message(val id: UniqueIdentifier,
                    override val linearId: UniqueIdentifier = UniqueIdentifier())
 ```
 
-Better data from the distributed network can exported and to use the tabular Case data for Deep Learning and Analytics. Find out faster where cases are emerging. Where to quarantine. Case References can also be used.
+Tabular data from the distributed network can be exported for Deep Learning and Analytics. Find out faster where cases are emerging. Where to quarantine. Case References can also be used.
+
+The Deep Learning Notebooks can be found in the /notebooks dir. 
