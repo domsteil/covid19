@@ -19,7 +19,7 @@ object CreatePatientFlow {
                      val firstName: String,
                      val lastName: String,
                      val sex: Sex,
-                     val: age: Int,
+                     val age: Int,
                      val email: String,
                      val phone: String,
                      val processor: Party) : FlowLogic<SignedTransaction>() {
