@@ -1,5 +1,5 @@
-# covid19
-covid19 case web app, network and deep learning model
+# covid19 case network
+covid19 case network web app, distributed network and deep learning model
 
 The problem with the current numbers and analytics is there are multiple CSV files with poor versioning.
 There is different formats, numbers of columns and it is difficult for people to report cases themselves. 
