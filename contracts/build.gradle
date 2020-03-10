@@ -4,7 +4,7 @@ cordapp {
     targetPlatformVersion 4
     minimumPlatformVersion 4
     contract {
-        name "Covid Contracts"
+        name "Covid Case Network Contracts"
         vendor "Stateset, Inc."
         licence "Open Source (Apache 2)"
         versionId 1

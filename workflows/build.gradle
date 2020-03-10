@@ -5,7 +5,7 @@ cordapp {
     targetPlatformVersion 4
     minimumPlatformVersion 4
     workflow {
-        name "Covid Workflows"
+        name "Covid Case Network Workflows"
         vendor "Stateset, Inc."
         licence "Open Source (Apache 2)"
         versionId 1

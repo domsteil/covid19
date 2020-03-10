@@ -15,8 +15,8 @@ import { SubscriptionClient } from 'subscriptions-transport-ws';
 import { split } from 'apollo-link';
 import { getMainDefinition } from 'apollo-utilities';
 
-export const GRAPHQL_ENDPOINT = `https://dsoa.herokuapp.com/v1/graphql`;
-export const WEBSOCKET_ENDPOINT = `wss://dsoa.herokuapp.com/v1/graphql`;
+export const GRAPHQL_ENDPOINT = `https://<POSTGRES>/v1/graphql`;
+export const WEBSOCKET_ENDPOINT = `wss://<POSTGRES>/v1/graphql`;
 
 const wsLink = process.browser ? new WebSocketLink({ // if you instantiate in the server, the error will be thrown
   uri: WEBSOCKET_ENDPOINT,
