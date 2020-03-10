@@ -1,2 +1,8 @@
-rootProject.name = 'covid'
+rootProject.name = "covid"
+
+include 'workflows'
+include 'contracts'
+include 'client'
+include 'client'
+include 'server'
 
