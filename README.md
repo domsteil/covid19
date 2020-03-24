@@ -1,9 +1,9 @@
 # covid19 case network
 covid19 case network web app, distributed network and deep learning model
 
-The problem with the current systems in place is there are limited means of sharing covid information. There is a lack of visibility into submitted cases by region. There needs to be a better way to reference how new cases emerged. There needs to be a better way to communicate effective treatments and sharing data across regions and medical offices.
+The problem with the current systems in place is there are limited means of sharing covid information. There is a lack of visibility into submitted cases by region and facilities available by region. There needs to be a better way to reference how new cases emerged. There needs to be a better way to communicate effective treatments and sharing data across regions, facilities and medical offices.
 There is different formats, numbers of columns and it is difficult for people to report cases themselves. 
-The web app allows users to submit cases and messages on the network.
+The web app allows users to submit cases and messages between organizations on the network.
 The case is created on the network and sent to the main Corona Virus Case Network. 
 
 The Case will use a shared structured format:
