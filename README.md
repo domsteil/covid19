@@ -11,6 +11,58 @@ There is different formats, numbers of columns and it is difficult for people to
 The web app allows users to submit cases and messages between organizations on the network.
 The case is created on the network and sent to the main Corona Virus Case Network. 
 
+
+## Web App:
+
+```bash
+
+git clone https://github.com/domsteil/covid19
+cd client
+npm install
+npm run dev
+
+```
+
+
+## Case Network
+
+
+
+1) Deploy the Nodes
+
+
+```bash
+
+gradlew.bat deployNodes (Windows) OR ./gradlew deployNodes (Linux)
+
+```
+
+3) Run the Nodes
+
+```bash
+
+cd workflows
+cd build 
+cd nodes
+runnodes.bat (Windows) OR ./runnodes (Linux)
+
+```
+4) Run the Spring Boot Server
+
+```bash
+
+cd ..
+cd ..
+cd server
+../gradlew.bat bootRun -x test (Windows) OR ../gradlew bootRun -x test
+
+```
+The Covid Case Network API Swagger will be running at `http://localhost:8080/swagger-ui.html#/`
+
+
+## Case Network Structured Data:
+
+
 The Case will use a shared structured format:
 
 ```jsx
