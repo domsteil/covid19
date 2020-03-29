@@ -12,7 +12,7 @@ The web app allows users to submit cases and messages between organizations on t
 The case is created on the network and sent to the main Corona Virus Case Network. 
 
 
-## Web App:
+## Starting the Web App:
 
 ```bash
 
@@ -24,9 +24,7 @@ npm run dev
 ```
 
 
-## Case Network
-
-
+## Starting the Case Network:
 
 1) Deploy the Nodes
 
