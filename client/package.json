@@ -1,13 +1,10 @@
 {
-  "name": "covid",
+  "name": "covid19",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
-    "it": "next dev",
-    "dev": "node dev",
+    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "storybook": "start-storybook"
+    "start": "next start"
   },
   "engines": {
     "node": "10.x"
@@ -92,7 +89,7 @@
     "libp2p": "^0.24.0",
     "mitt": "^1.1.3",
     "moment": "^2.24.0",
-    "next": "^9.2.0",
+    "next": "^9.3.2",
     "next-cookies": "^1.1.2",
     "next-redux-wrapper": "^3.0.0-alpha.3",
     "nhost-js-sdk": "^1.1.1",
