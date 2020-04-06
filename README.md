@@ -2,7 +2,7 @@
 covid19 case network web app, distributed network and deep learning model.
 
 
-![Cases](covid19_march_2020.png)
+![Cases](covid19_3_4_2020.png)
 
 
 The problem with the current systems in place is there are limited means of sharing covid information among facilities. There is limited self-testing, limited ways to report cases, overall the only reliable source is via excel files that are being updated every couple hours. There are multiple excel files of data with different formats and updating the data is manual and time consuming. 
