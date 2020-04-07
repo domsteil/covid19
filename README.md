@@ -1,4 +1,4 @@
-# covid19 case network
+# covid19 inter-sectoral collaboration network
 covid19 case network web app, distributed network and deep learning model.
 
 
